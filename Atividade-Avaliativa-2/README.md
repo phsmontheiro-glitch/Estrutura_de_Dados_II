@@ -6,6 +6,8 @@ Esta atividade foi desenvolvida para a disciplina de **Estrutura de Dados II**, 
 
 Durante a atividade foram desenvolvidos códigos e experimentos para observar, medir e analisar a quantidade de operações realizadas pelos algoritmos.
 
+Como complemento, também foi realizada uma atividade prática de análise de algoritmos de ordenação, comparando **Bubble Sort, Insertion Sort, Selection Sort e Quick Sort** em diferentes situações de entrada.
+
 ---
 
 ## Conteúdos trabalhados
@@ -16,12 +18,15 @@ Durante a atividade foram desenvolvidos códigos e experimentos para observar, m
 - Loops
 - Loops aninhados
 - Bubble Sort
+- Insertion Sort
+- Selection Sort
 - Quick Sort
 - Busca sequencial
 - Comparações
 - Trocas e movimentações
 - Complexidade computacional
 - Análise experimental de algoritmos
+- Influência da organização inicial dos dados
 
 ---
 
@@ -51,15 +56,20 @@ Atividade-Avaliativa-2/
 │   ├── sensores.py
 │   └── analise.md
 │
-└── Parte-6-Analise-Conclusao/
-    └── analise.md
+├── Parte-6-Analise-Conclusao/
+│   └── analise.md
+│
+└── Atividade-3-Ordenacao/
+    ├── ordenacao.py
+    ├── resultados.md
+    └── desafio.md
 ```
 
 ---
 
-## Partes da atividade
+# Partes da atividade
 
-### Parte 1 - Pesquisa
+## Parte 1 - Pesquisa
 
 Foi realizada uma pesquisa sobre os algoritmos **Bubble Sort** e **Quick Sort**.
 
@@ -81,9 +91,9 @@ Também foi criada uma tabela comparativa entre os dois algoritmos.
 
 ---
 
-### Parte 2 - Experimento de Ordenação
+## Parte 2 - Experimento de Ordenação
 
-Foi desenvolvido um experimento para comparar os algoritmos **Bubble Sort** e **Quick Sort** utilizando exatamente os mesmos dados.
+Foi desenvolvido um experimento para comparar os algoritmos **Bubble Sort** e **Quick Sort** utilizando os mesmos dados.
 
 Foram realizados testes com arrays de:
 
@@ -105,7 +115,7 @@ Além do código, foram registrados os resultados experimentais e realizadas as 
 
 ---
 
-### Parte 3 - Busca em Matrizes
+## Parte 3 - Busca em Matrizes
 
 Foi desenvolvido um algoritmo de **busca sequencial utilizando loops aninhados**.
 
@@ -129,7 +139,7 @@ Também foi contabilizada a quantidade de comparações realizadas.
 
 ---
 
-### Parte 4 - Investigação do Array
+## Parte 4 - Investigação do Array
 
 Foi desenvolvido um programa utilizando um array com 10 temperaturas.
 
@@ -151,7 +161,7 @@ Também foi analisada a quantidade aproximada de percursos realizados pelo array
 
 ---
 
-### Parte 5 - Monitoramento de Sensores
+## Parte 5 - Monitoramento de Sensores
 
 Foi desenvolvido um sistema utilizando uma matriz para representar:
 
@@ -174,7 +184,7 @@ Também foram analisados os loops aninhados, os índices da matriz, a quantidade
 
 ---
 
-### Parte 6 - Análise e Conclusão
+## Parte 6 - Análise e Conclusão
 
 Nesta etapa foram analisados os experimentos realizados durante a atividade.
 
@@ -188,7 +198,56 @@ Foram discutidos:
 
 ---
 
-## Complexidade estudada
+# Atividade 3 - Análise de Algoritmos de Ordenação
+
+Como complemento da atividade, foi desenvolvida uma análise prática comparando quatro algoritmos de ordenação:
+
+- Bubble Sort;
+- Insertion Sort;
+- Selection Sort;
+- Quick Sort.
+
+Foram utilizados vetores com:
+
+- 10 elementos;
+- 20 elementos;
+- 1.000 elementos.
+
+Todos os algoritmos receberam cópias dos mesmos dados em cada experimento.
+
+A quantidade de **comparações**, **trocas** e **movimentações** foi contabilizada para permitir uma comparação experimental entre os algoritmos.
+
+📄 **[Acessar código da atividade prática](https://github.com/phsmontheiro-glitch/Estrutura_de_Dados_II/blob/main/Atividade-Avaliativa-2/Atividade-3-Ordenacao/ordenacao.py)**
+
+📊 **[Acessar resultados e análise](https://github.com/phsmontheiro-glitch/Estrutura_de_Dados_II/blob/main/Atividade-Avaliativa-2/Atividade-3-Ordenacao/resultados.md)**
+
+🧪 **[Acessar desafio – Organização inicial dos dados](https://github.com/phsmontheiro-glitch/Estrutura_de_Dados_II/blob/main/Atividade-Avaliativa-2/Atividade-3-Ordenacao/desafio.md)**
+
+---
+
+## Desafio - Influência da Organização Inicial dos Dados
+
+No desafio da atividade prática, os algoritmos foram testados com **1.000 elementos** em três situações:
+
+- vetor aleatório;
+- vetor já ordenado;
+- vetor em ordem inversa.
+
+O objetivo foi observar se a organização inicial dos dados influencia a quantidade de operações realizadas.
+
+Os resultados mostraram diferenças importantes entre os algoritmos.
+
+No vetor aleatório, o **Quick Sort** apresentou o menor número de comparações.
+
+No vetor já ordenado, o **Bubble Sort** e o **Insertion Sort** apresentaram apenas **999 comparações**.
+
+No vetor inverso, Bubble Sort e Insertion Sort apresentaram uma quantidade muito elevada de operações.
+
+O Quick Sort também apresentou um comportamento pior nas entradas ordenada e inversa devido à escolha do último elemento como pivô.
+
+---
+
+# Complexidade estudada
 
 Durante a atividade foram trabalhadas diferentes formas de crescimento de algoritmos.
 
@@ -202,28 +261,39 @@ O(n²)      → Quadrática
 O(n log n) → Crescimento mais eficiente que O(n²)
 ```
 
+Algumas das principais complexidades analisadas foram:
+
+```text
+Bubble Sort     → O(n²)
+Insertion Sort  → O(n²)
+Selection Sort  → O(n²)
+Quick Sort      → O(n log n) em média
+```
+
 Um dos principais objetivos da atividade foi compreender que o aumento da quantidade de elementos pode alterar significativamente a quantidade de operações realizadas.
 
 ---
 
-## Principais resultados observados
+# Principais resultados observados
 
-Nos experimentos de ordenação, a diferença entre os algoritmos se tornou mais evidente conforme o tamanho do array aumentou.
+## Experimento com 1.000 elementos
 
-Com 1.000 elementos, por exemplo:
+Na execução mais recente da atividade prática, os resultados foram:
 
-```text
-Bubble Sort:
+| Algoritmo | Comparações | Trocas/Movimentações | Total de operações |
+|---|---:|---:|---:|
+| Bubble Sort | 498.324 | 251.723 | 750.047 |
+| Insertion Sort | 252.710 | 252.722 | 505.432 |
+| Selection Sort | 499.500 | 994 | 500.494 |
+| Quick Sort | 10.965 | 5.220 | 16.185 |
 
-742.450 operações contabilizadas
+O **Quick Sort** apresentou a menor quantidade de operações contabilizadas nesse experimento.
 
+---
 
-Quick Sort:
+## Busca sequencial em matrizes
 
-15.526 operações contabilizadas
-```
-
-Na busca sequencial em matrizes, também foi observado que a posição do valor procurado influencia diretamente a quantidade de comparações.
+Na busca sequencial em matrizes, foi observado que a posição do valor procurado influencia diretamente a quantidade de comparações.
 
 Por exemplo:
 
@@ -244,7 +314,7 @@ Esses resultados mostram, na prática, como o tamanho da estrutura e a posição
 
 ---
 
-## Objetivo final
+# Objetivo final
 
 A atividade busca demonstrar que dois algoritmos podem produzir o mesmo resultado e, mesmo assim, apresentar custos computacionais diferentes.
 
@@ -276,3 +346,4 @@ Eficiência
 **Pedro Henrique Silva Monteiro**
 
 Projeto desenvolvido para fins acadêmicos na disciplina de **Estrutura de Dados II**.
+
