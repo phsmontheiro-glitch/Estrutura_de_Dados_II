@@ -30,9 +30,9 @@ Cada algoritmo recebeu uma cópia do mesmo vetor original em cada experimento.
 
 | Tamanho | Bubble Comparações | Bubble Trocas | Insertion Comparações | Insertion Mov. | Selection Comparações | Selection Trocas | Quick Comparações | Quick Mov. |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 10 | 39 | 16 | 23 | 25 | 45 | 8 | 21 | 12 |
-| 20 | 189 | 119 | 133 | 138 | 190 | 17 | 63 | 29 |
-| 1.000 | 499.434 | 257.938 | 258.930 | 258.937 | 499.500 | 991 | 11.910 | 4.824 |
+| 10 | 35 | 20 | 28 | 29 | 45 | 8 | 21 | 10 |
+| 20 | 189 | 113 | 130 | 132 | 190 | 17 | 72 | 25 |
+| 1.000 | 498.324 | 251.723 | 252.710 | 252.722 | 499.500 | 994 | 10.965 | 5.220 |
 
 ---
 
@@ -44,8 +44,8 @@ Para 10 elementos, o **Quick Sort** realizou o menor número de comparações.
 
 Os resultados foram:
 
-- Bubble Sort: 39 comparações;
-- Insertion Sort: 23 comparações;
+- Bubble Sort: 35 comparações;
+- Insertion Sort: 28 comparações;
 - Selection Sort: 45 comparações;
 - Quick Sort: 21 comparações.
 
@@ -59,10 +59,10 @@ Para 10 elementos, o **Selection Sort** realizou a menor quantidade de trocas, c
 
 Os resultados foram:
 
-- Bubble Sort: 16 trocas;
-- Insertion Sort: 25 movimentações;
+- Bubble Sort: 20 trocas;
+- Insertion Sort: 29 movimentações;
 - Selection Sort: 8 trocas;
-- Quick Sort: 12 movimentações.
+- Quick Sort: 10 movimentações.
 
 ---
 
@@ -73,11 +73,11 @@ De maneira geral, sim.
 O Quick Sort continuou apresentando uma quantidade menor de comparações:
 
 - 10 elementos: 21 comparações;
-- 20 elementos: 63 comparações.
+- 20 elementos: 72 comparações.
 
 O Insertion Sort também apresentou menos comparações que Bubble Sort e Selection Sort nos dois tamanhos.
 
-Já Bubble Sort e Selection Sort apresentaram um crescimento maior na quantidade de comparações.
+Já Bubble Sort e Selection Sort apresentaram uma quantidade maior de comparações.
 
 ---
 
@@ -87,10 +87,10 @@ Quando o vetor aumentou para 1.000 elementos, a diferença entre os algoritmos f
 
 Os resultados de comparações foram:
 
-- Bubble Sort: **499.434**;
-- Insertion Sort: **258.930**;
+- Bubble Sort: **498.324**;
+- Insertion Sort: **252.710**;
 - Selection Sort: **499.500**;
-- Quick Sort: **11.910**.
+- Quick Sort: **10.965**.
 
 O Quick Sort realizou uma quantidade de comparações muito menor que os outros algoritmos.
 
@@ -102,12 +102,12 @@ Isso demonstra como o aumento do tamanho da entrada pode causar um crescimento s
 
 Não.
 
-Apesar de Bubble Sort, Insertion Sort e Selection Sort apresentarem complexidade **O(n²)** em situações típicas estudadas, isso não significa que realizem exatamente a mesma quantidade de operações.
+Apesar de Bubble Sort, Insertion Sort e Selection Sort apresentarem complexidade **O(n²)** em suas situações gerais, isso não significa que realizem exatamente a mesma quantidade de operações.
 
 Com 1.000 elementos, por exemplo:
 
-- Bubble Sort: 499.434 comparações;
-- Insertion Sort: 258.930 comparações;
+- Bubble Sort: 498.324 comparações;
+- Insertion Sort: 252.710 comparações;
 - Selection Sort: 499.500 comparações.
 
 Portanto, algoritmos com a mesma ordem de complexidade podem apresentar quantidades diferentes de operações.
@@ -120,10 +120,10 @@ O **Bubble Sort** apresentou o maior crescimento na quantidade total de operaç�
 
 Considerando comparações e trocas/movimentações:
 
-- Bubble Sort: 55 operações com 10 elementos e 757.372 com 1.000;
-- Insertion Sort: 48 operações com 10 elementos e 517.867 com 1.000;
-- Selection Sort: 53 operações com 10 elementos e 500.491 com 1.000;
-- Quick Sort: 33 operações com 10 elementos e 16.734 com 1.000.
+- Bubble Sort: **55 operações** com 10 elementos e **750.047 operações** com 1.000;
+- Insertion Sort: **57 operações** com 10 elementos e **505.432 operações** com 1.000;
+- Selection Sort: **53 operações** com 10 elementos e **500.494 operações** com 1.000;
+- Quick Sort: **31 operações** com 10 elementos e **16.185 operações** com 1.000.
 
 Assim, o Bubble Sort apresentou o maior crescimento na quantidade total de operações neste experimento.
 
@@ -135,7 +135,7 @@ O Quick Sort apresentou um crescimento muito menor na quantidade de comparaçõe
 
 Com 1.000 elementos, foram realizadas:
 
-**11.910 comparações**
+**10.965 comparações**
 
 enquanto Bubble Sort e Selection Sort realizaram aproximadamente:
 
@@ -161,6 +161,7 @@ Insertion Sort  → O(n²)
 Selection Sort  → O(n²)
 Quick Sort      → O(n log n) em média
 ```
+
 Os resultados experimentais demonstram, na prática, a diferença entre essas ordens de crescimento.
 
 ---
@@ -169,7 +170,7 @@ Os resultados experimentais demonstram, na prática, a diferença entre essas or
 
 Eu escolheria o **Quick Sort**.
 
-No experimento com 1.000 elementos, ele realizou apenas **11.910 comparações**, enquanto Bubble Sort e Selection Sort realizaram aproximadamente **499.000 comparações**.
+No experimento com 1.000 elementos, ele realizou apenas **10.965 comparações**, enquanto Bubble Sort e Selection Sort realizaram aproximadamente **499.000 comparações**.
 
 Por apresentar um comportamento mais eficiente para grandes quantidades de dados e complexidade média **O(n log n)**, o Quick Sort seria uma escolha mais adequada para ordenar milhares de pedidos.
 
@@ -179,7 +180,7 @@ Por apresentar um comportamento mais eficiente para grandes quantidades de dados
 
 O experimento mostrou que diferentes algoritmos podem produzir o mesmo resultado final, mas realizar quantidades muito diferentes de operações.
 
-Nos testes realizados, a diferença ficou principalmente evidente quando o vetor passou para 1.000 elementos. Bubble Sort e Selection Sort apresentaram aproximadamente **499 mil comparações**, enquanto o Quick Sort realizou **11.910 comparações**.
+Nos testes realizados, a diferença ficou principalmente evidente quando o vetor passou para 1.000 elementos. Bubble Sort e Selection Sort apresentaram aproximadamente **499 mil comparações**, enquanto o Quick Sort realizou **10.965 comparações**.
 
 O Insertion Sort também apresentou menos comparações que Bubble Sort e Selection Sort nesse conjunto de dados.
 
@@ -194,6 +195,3 @@ Complexidade
         ↓
 Eficiência
 ```
-
-Essa é a versão **limpa para copiar e colar no GitHub**, sem aquela parte da minha explicação no final.
-
